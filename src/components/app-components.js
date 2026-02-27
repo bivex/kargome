@@ -672,8 +672,23 @@ class AppComponents extends LitElement {
       <!-- Drawer Overlay -->
       <app-drawer ?open=${this._drawerOpen} @close=${() => this._drawerOpen = false}>
         <div style="padding:var(--space-6)">
-          <h3>Drawer Content</h3>
-          <p>This is a drawer component.</p>
+          <h2 style="font-size:var(--font-size-lg);font-weight:var(--font-weight-semibold);margin-bottom:var(--space-4)">Navigation</h2>
+          <nav style="display:flex;flex-direction:column;gap:var(--space-2)">
+            <a href="#components" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border-radius:var(--radius-md);text-decoration:none;color:var(--color-text);transition:background var(--transition-fast)" @mouseover=${(e) => e.target.style.background = 'var(--color-bg-secondary)'} @mouseout=${(e) => e.target.style.background = 'transparent'}>
+              <span>🏠</span> Home
+            </a>
+            <a href="#components" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border-radius:var(--radius-md);text-decoration:none;color:var(--color-text);transition:background var(--transition-fast)" @mouseover=${(e) => e.target.style.background = 'var(--color-bg-secondary)'} @mouseout=${(e) => e.target.style.background = 'transparent'}>
+              <span>📦</span> Components
+            </a>
+            <a href="#docs" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border-radius:var(--radius-md);text-decoration:none;color:var(--color-text);transition:background var(--transition-fast)" @mouseover=${(e) => e.target.style.background = 'var(--color-bg-secondary)'} @mouseout=${(e) => e.target.style.background = 'transparent'}>
+              <span>📚</span> Documentation
+            </a>
+            <a href="#github" style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border-radius:var(--radius-md);text-decoration:none;color:var(--color-text);transition:background var(--transition-fast)" @mouseover=${(e) => e.target.style.background = 'var(--color-bg-secondary)'} @mouseout=${(e) => e.target.style.background = 'transparent'}>
+              <span>⚡</span> GitHub
+            </a>
+          </nav>
+          <app-divider style="margin:var(--space-4) 0"></app-divider>
+          <p style="font-size:var(--font-size-sm);color:var(--color-text-secondary)">Slide-out panel for additional content and navigation.</p>
         </div>
       </app-drawer>
     `
