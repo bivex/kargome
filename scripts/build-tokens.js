@@ -53,6 +53,33 @@ const lightVars  = extractVars(lightCss)
 const darkVars   = extractVars(darkCss)
 const springVars = extractVars(springCss)
 
+// Collect which var names are overridden by dark or spring themes.
+// Only those vars need to appear in [data-theme="light"] — structural
+// tokens (spacing, typography, layout) are identical across all themes
+// and are already declared in :root, so repeating them is wasteful.
+const getVarNames = (varsBlock) => {
+  const names = new Set()
+  for (const line of varsBlock.split('\n')) {
+    const m = line.match(/^\s*(--[\w-]+)\s*:/)
+    if (m) names.add(m[1])
+  }
+  return names
+}
+
+const themeVarNames = new Set([
+  ...getVarNames(darkVars),
+  ...getVarNames(springVars),
+])
+
+const filterToThemeVars = (varsBlock) =>
+  varsBlock
+    .split('\n')
+    .filter(line => {
+      const m = line.match(/^\s*(--[\w-]+)\s*:/)
+      return !m || themeVarNames.has(m[1])
+    })
+    .join('\n')
+
 // 4. Assemble final tokens.css
 const output = `/* ─────────────────────────────────────────────────────
  * Auto-generated — do not edit directly.
@@ -62,7 +89,7 @@ const output = `/* ────────────────────�
  * Regenerate: bun run tokens
  * ───────────────────────────────────────────────────── */
 
-/* Light (default) */
+/* Light (default) — all tokens */
 :root {
 ${lightVars}}
 
@@ -76,9 +103,11 @@ ${darkVars}  }
 :root[data-theme="dark"] {
 ${darkVars}}
 
-/* Explicit light — forces light even if system is dark */
+/* Explicit light — forces light even when system prefers dark.
+ * Only color overrides are needed; structural tokens (spacing,
+ * typography, layout) are already set in :root and never change. */
 :root[data-theme="light"] {
-${lightVars}}
+${filterToThemeVars(lightVars)}}
 
 /* Spring & sunshine */
 :root[data-theme="spring"] {

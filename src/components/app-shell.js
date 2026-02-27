@@ -419,7 +419,7 @@ class AppShell extends LitElement {
                   </div>
                   <div>
                     <div class="card__name">Vite</div>
-                    <div class="card__version">v5.4.21</div>
+                    <div class="card__version">v6.4.1</div>
                   </div>
                 </div>
                 <p class="card__text">

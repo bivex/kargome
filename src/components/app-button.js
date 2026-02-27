@@ -98,7 +98,7 @@ class AppButton extends LitElement {
     if (this.href) {
       return html`<a href="${this.href}" part="button"><slot></slot></a>`
     }
-    return html`<button ?disabled="${this.disabled}" part="button"><slot></slot></button>`
+    return html`<button type="button" ?disabled="${this.disabled}" part="button"><slot></slot></button>`
   }
 }
 
