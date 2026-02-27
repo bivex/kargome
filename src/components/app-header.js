@@ -124,6 +124,8 @@ class AppHeader extends LitElement {
             Kargome
           </a>
           <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/?page=components">Components</a></li>
             <li><a href="https://lit.dev" target="_blank" rel="noopener">Lit</a></li>
             <li><a href="https://vitejs.dev" target="_blank" rel="noopener">Vite</a></li>
             <li><a href="https://bun.sh" target="_blank" rel="noopener">Bun</a></li>
