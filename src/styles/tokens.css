@@ -20,6 +20,8 @@
  	--color-fill-green: #34c759;
  	--color-fill-blue: #007aff;
  	--color-nav-bg: rgba(255, 255, 255, 0.72);
+ 	--color-surface-inverse: #1d1d1f;
+ 	--color-btn-primary-text: #ffffff;
  	--container-max: 980px;
  	--container-wide: 1200px;
  	--nav-height: 48px;
@@ -71,6 +73,8 @@
  	--color-accent-hover: #429cff;
  	--color-border: #3a3a3c;
  	--color-nav-bg: rgba(0, 0, 0, 0.72);
+ 	--color-surface-inverse: #3a3a3c;
+ 	--color-btn-primary-text: #ffffff;
   }
 }
 
@@ -85,6 +89,8 @@
  	--color-accent-hover: #429cff;
  	--color-border: #3a3a3c;
  	--color-nav-bg: rgba(0, 0, 0, 0.72);
+ 	--color-surface-inverse: #3a3a3c;
+ 	--color-btn-primary-text: #ffffff;
 }
 
 /* Explicit light — forces light even if system is dark */
@@ -101,6 +107,8 @@
  	--color-fill-green: #34c759;
  	--color-fill-blue: #007aff;
  	--color-nav-bg: rgba(255, 255, 255, 0.72);
+ 	--color-surface-inverse: #1d1d1f;
+ 	--color-btn-primary-text: #ffffff;
  	--container-max: 980px;
  	--container-wide: 1200px;
  	--nav-height: 48px;
@@ -154,4 +162,6 @@
  	--color-fill-green: #3d9e50;
  	--color-fill-blue: #0288d1;
  	--color-nav-bg: rgba(255, 254, 245, 0.82);
+ 	--color-surface-inverse: #2a1f0a;
+ 	--color-btn-primary-text: #2a1f0a;
 }

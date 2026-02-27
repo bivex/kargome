@@ -12,6 +12,8 @@
     "fill-red": { "$value": "#ff3b30", "$description": "Destructive / error" },
     "fill-green": { "$value": "#34c759", "$description": "Success" },
     "fill-blue": { "$value": "#007aff", "$description": "Info" },
-    "nav-bg": { "$value": "rgba(255, 255, 255, 0.72)", "$description": "Frosted-glass nav background" }
+    "nav-bg": { "$value": "rgba(255, 255, 255, 0.72)", "$description": "Frosted-glass nav background" },
+    "surface-inverse": { "$value": "#1d1d1f", "$description": "Dark surface for tech icons on light background" },
+    "btn-primary-text": { "$value": "#ffffff", "$description": "Text color on primary accent button" }
   }
 }

@@ -12,6 +12,8 @@
     "fill-red":       { "$value": "#e05c3a", "$description": "Warm tomato" },
     "fill-green":     { "$value": "#3d9e50", "$description": "Fresh spring green" },
     "fill-blue":      { "$value": "#0288d1", "$description": "Clear sky blue" },
-    "nav-bg":         { "$value": "rgba(255, 254, 245, 0.82)", "$description": "Warm frosted glass nav" }
+    "nav-bg":         { "$value": "rgba(255, 254, 245, 0.82)", "$description": "Warm frosted glass nav" },
+    "surface-inverse": { "$value": "#2a1f0a", "$description": "Warm dark surface for tech icons on spring background" },
+    "btn-primary-text": { "$value": "#2a1f0a", "$description": "Dark text on golden amber button — WCAG AA 4.86:1" }
   }
 }

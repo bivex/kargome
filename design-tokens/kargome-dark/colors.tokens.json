@@ -9,6 +9,8 @@
     "accent": { "$value": "#2997ff" },
     "accent-hover": { "$value": "#429cff" },
     "border": { "$value": "#3a3a3c" },
-    "nav-bg": { "$value": "rgba(0, 0, 0, 0.72)" }
+    "nav-bg": { "$value": "rgba(0, 0, 0, 0.72)" },
+    "surface-inverse": { "$value": "#3a3a3c" },
+    "btn-primary-text": { "$value": "#ffffff" }
   }
 }

@@ -345,7 +345,7 @@ class AppShell extends LitElement {
 
               <div class="card">
                 <div class="card__head">
-                  <div class="card__icon" style="background:#1a1a2e">
+                  <div class="card__icon" style="background:var(--color-surface-inverse)">
                     <!-- Lit flame -->
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                       <path d="M12 2C12 2 7 7 7 13a5 5 0 0010 0c0-3-2-5-2-5s-1 2-3 2c0-4 2-6 2-6 0 0 1 1.5 2 3 .7 1 1 2.3 1 3.5" stroke="#ff7c5c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -365,7 +365,7 @@ class AppShell extends LitElement {
 
               <div class="card">
                 <div class="card__head">
-                  <div class="card__icon" style="background:#1a2e1a">
+                  <div class="card__icon" style="background:var(--color-surface-inverse)">
                     <!-- Vite bolt -->
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8e063" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                       <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
@@ -385,7 +385,7 @@ class AppShell extends LitElement {
 
               <div class="card">
                 <div class="card__head">
-                  <div class="card__icon" style="background:#2e1a2e">
+                  <div class="card__icon" style="background:var(--color-surface-inverse)">
                     <!-- CSS bolt -->
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d07aff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M4 3h16l-2 14-6 2-6-2z"/>
@@ -406,7 +406,7 @@ class AppShell extends LitElement {
 
               <div class="card">
                 <div class="card__head">
-                  <div class="card__icon" style="background:#2e2010">
+                  <div class="card__icon" style="background:var(--color-surface-inverse)">
                     <!-- Bun circle -->
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linecap="round">
                       <circle cx="12" cy="13" r="7"/>
@@ -471,24 +471,26 @@ class AppShell extends LitElement {
           <div class="container">
             <p class="section__label">Design tokens</p>
             <h2 class="section__title">CSS Custom Properties</h2>
-            <p class="section__sub">Defined in tokens.css · dark mode via prefers-color-scheme.</p>
+            <p class="section__sub">Defined in tokens.css · live: swatches reflect the active theme.</p>
 
             <div class="tokens-grid">
               ${[
-                { name: '--color-bg',           hex: '#ffffff', dark: '#000000' },
-                { name: '--color-bg-secondary', hex: '#f5f5f7', dark: '#1c1c1e' },
-                { name: '--color-text',         hex: '#1d1d1f', dark: '#f5f5f7' },
-                { name: '--color-text-secondary',hex: '#515154', dark: '#98989d' },
-                { name: '--color-accent',        hex: '#0071e3', dark: '#2997ff' },
-                { name: '--color-border',        hex: '#d2d2d7', dark: '#3a3a3c' },
-                { name: '--color-fill-red',      hex: '#ff3b30' },
-                { name: '--color-fill-green',    hex: '#34c759' },
-              ].map(t => html`
+                '--color-bg',
+                '--color-bg-secondary',
+                '--color-text',
+                '--color-text-secondary',
+                '--color-accent',
+                '--color-border',
+                '--color-fill-red',
+                '--color-fill-green',
+                '--color-surface-inverse',
+                '--color-btn-primary-text',
+              ].map(name => html`
                 <div class="token">
-                  <div class="token__swatch" style="background:${t.hex}"></div>
+                  <div class="token__swatch" style="background:var(${name})"></div>
                   <div class="token__info">
-                    <div class="token__name">${t.name.replace('--color-', '')}</div>
-                    <div class="token__hex">${t.hex}${t.dark ? ` · ${t.dark}` : ''}</div>
+                    <div class="token__name">${name.replace('--color-', '')}</div>
+                    <div class="token__hex">${name}</div>
                   </div>
                 </div>
               `)}

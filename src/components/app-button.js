@@ -59,7 +59,7 @@ class AppButton extends LitElement {
     :host([variant="primary"]) button,
     :host([variant="primary"]) a {
       background-color: var(--color-accent);
-      color: #ffffff;
+      color: var(--color-btn-primary-text);
     }
 
     :host([variant="primary"]) button:hover:not(:disabled),
