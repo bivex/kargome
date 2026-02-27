@@ -1,0 +1,12 @@
+{
+  "container": {
+    "$type": "dimension",
+    "$description": "Layout container widths",
+    "max":  { "$value": "980px",  "$description": "Default max-width" },
+    "wide": { "$value": "1200px", "$description": "Wide layout max-width" }
+  },
+  "nav": {
+    "$type": "dimension",
+    "height": { "$value": "48px", "$description": "Sticky nav height" }
+  }
+}

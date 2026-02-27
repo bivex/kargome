@@ -1,0 +1,14 @@
+{
+  "color": {
+    "$type": "color",
+    "$description": "Kargome dark mode color overrides",
+    "bg": { "$value": "#000000" },
+    "bg-secondary": { "$value": "#1c1c1e" },
+    "text": { "$value": "#f5f5f7" },
+    "text-secondary": { "$value": "#98989d" },
+    "accent": { "$value": "#2997ff" },
+    "accent-hover": { "$value": "#429cff" },
+    "border": { "$value": "#3a3a3c" },
+    "nav-bg": { "$value": "rgba(0, 0, 0, 0.72)" }
+  }
+}

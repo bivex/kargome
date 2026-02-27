@@ -1,0 +1,8 @@
+{
+  "shadow": {
+    "$description": "Elevation shadow scale",
+    "sm": { "$value": "0 1px 3px rgba(0,0,0,0.1)",   "$description": "Subtle elevation" },
+    "md": { "$value": "0 4px 16px rgba(0,0,0,0.12)",  "$description": "Card elevation" },
+    "lg": { "$value": "0 12px 40px rgba(0,0,0,0.15)", "$description": "Modal elevation" }
+  }
+}

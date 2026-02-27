@@ -1,0 +1,29 @@
+{
+  "font": {
+    "$description": "Kargome typography tokens",
+    "family": {
+      "$value": "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif",
+      "$description": "System font stack"
+    },
+    "size": {
+      "$type": "dimension",
+      "xs":  { "$value": "0.75rem",  "$description": "12px" },
+      "sm":  { "$value": "0.875rem", "$description": "14px" },
+      "base":{ "$value": "1rem",     "$description": "16px" },
+      "lg":  { "$value": "1.125rem", "$description": "18px" },
+      "xl":  { "$value": "1.5rem",   "$description": "24px" },
+      "2xl": { "$value": "2rem",     "$description": "32px" },
+      "3xl": { "$value": "3rem",     "$description": "48px" }
+    },
+    "weight": {
+      "regular":   { "$value": "400" },
+      "medium":    { "$value": "500" },
+      "semibold":  { "$value": "600" },
+      "bold":      { "$value": "700" }
+    }
+  },
+  "line-height": {
+    "tight": { "$value": "1.2" },
+    "base":  { "$value": "1.6" }
+  }
+}

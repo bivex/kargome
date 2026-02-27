@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "tokens": "node scripts/build-tokens.js",
+    "dev": "bun run tokens && vite",
+    "build": "bun run tokens && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
