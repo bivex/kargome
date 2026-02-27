@@ -1,0 +1,13 @@
+# Modern browsers - >= 0.25% market share
+>= 0.25%
+last 2 versions
+Firefox ESR
+not dead
+
+# Exclude IE and old browsers
+not IE 11
+not OperaMini all
+not Android 4.4.3-4.4.4
+not < 0.25% in KR
+not < 0.25% in JP
+not < 0.25% in CN
