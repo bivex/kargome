@@ -1,0 +1,14 @@
+{
+  "globalPrefix": "",
+  "keepReferences": false,
+  "preserveOrder": true,
+  "transforms": [
+    {
+      "name": "kargome-spring",
+      "from": "design-tokens/kargome-spring",
+      "to": [
+        { "as": "css", "to": "design-tokens/generated" }
+      ]
+    }
+  ]
+}

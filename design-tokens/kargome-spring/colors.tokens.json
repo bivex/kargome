@@ -1,0 +1,17 @@
+{
+  "color": {
+    "$type": "color",
+    "$description": "Kargome spring & sunshine theme — warm ivory, golden amber, fresh green",
+    "bg":             { "$value": "#fffef5", "$description": "Warm ivory page background" },
+    "bg-secondary":   { "$value": "#f5f0db", "$description": "Buttercup cream surface" },
+    "text":           { "$value": "#2a1f0a", "$description": "Deep warm brown" },
+    "text-secondary": { "$value": "#6b5332", "$description": "Amber brown — WCAG AA 5.6:1 on bg-secondary" },
+    "accent":         { "$value": "#c47d0e", "$description": "Sunshine golden amber" },
+    "accent-hover":   { "$value": "#d48d1a", "$description": "Brighter amber hover" },
+    "border":         { "$value": "#ddd0a8", "$description": "Warm tan border" },
+    "fill-red":       { "$value": "#e05c3a", "$description": "Warm tomato" },
+    "fill-green":     { "$value": "#3d9e50", "$description": "Fresh spring green" },
+    "fill-blue":      { "$value": "#0288d1", "$description": "Clear sky blue" },
+    "nav-bg":         { "$value": "rgba(255, 254, 245, 0.82)", "$description": "Warm frosted glass nav" }
+  }
+}

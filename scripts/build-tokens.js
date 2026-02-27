@@ -33,13 +33,15 @@ const run = (config) => {
   execSync(`node ${cli} transform ${config}`, { cwd: root, stdio: 'inherit' })
 }
 
-// 1. Generate CSS for both themes
+// 1. Generate CSS for all themes
 run('design-tokens/kargome-light.config.json')
 run('design-tokens/kargome-dark.config.json')
+run('design-tokens/kargome-spring.config.json')
 
 // 2. Read generated files
-const lightCss = readFileSync(path.join(root, 'design-tokens/generated/kargome-light.tokens.css'), 'utf-8')
-const darkCss  = readFileSync(path.join(root, 'design-tokens/generated/kargome-dark.tokens.css'),  'utf-8')
+const lightCss  = readFileSync(path.join(root, 'design-tokens/generated/kargome-light.tokens.css'),  'utf-8')
+const darkCss   = readFileSync(path.join(root, 'design-tokens/generated/kargome-dark.tokens.css'),   'utf-8')
+const springCss = readFileSync(path.join(root, 'design-tokens/generated/kargome-spring.tokens.css'), 'utf-8')
 
 // 3. Extract variable block from :root { ... }
 const extractVars = (css) => {
@@ -47,13 +49,16 @@ const extractVars = (css) => {
   return match ? match[1] : ''
 }
 
-const lightVars = extractVars(lightCss)
-const darkVars  = extractVars(darkCss)
+const lightVars  = extractVars(lightCss)
+const darkVars   = extractVars(darkCss)
+const springVars = extractVars(springCss)
 
 // 4. Assemble final tokens.css
 const output = `/* ─────────────────────────────────────────────────────
  * Auto-generated — do not edit directly.
- * Source: design-tokens/kargome-light/ and kargome-dark/
+ * Sources: design-tokens/kargome-light/
+ *          design-tokens/kargome-dark/
+ *          design-tokens/kargome-spring/
  * Regenerate: bun run tokens
  * ───────────────────────────────────────────────────── */
 
@@ -63,7 +68,7 @@ ${lightVars}}
 
 /* System dark — only when no explicit [data-theme] override */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme="light"]):not([data-theme="spring"]) {
 ${darkVars}  }
 }
 
@@ -74,8 +79,12 @@ ${darkVars}}
 /* Explicit light — forces light even if system is dark */
 :root[data-theme="light"] {
 ${lightVars}}
+
+/* Spring & sunshine */
+:root[data-theme="spring"] {
+${springVars}}
 `
 
 const out = path.join(root, 'src/styles/tokens.css')
 writeFileSync(out, output)
-console.log('✓ src/styles/tokens.css generated from design tokens')
+console.log('✓ src/styles/tokens.css generated (light · dark · spring)')

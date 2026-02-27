@@ -1,6 +1,8 @@
 /* ─────────────────────────────────────────────────────
  * Auto-generated — do not edit directly.
- * Source: design-tokens/kargome-light/ and kargome-dark/
+ * Sources: design-tokens/kargome-light/
+ *          design-tokens/kargome-dark/
+ *          design-tokens/kargome-spring/
  * Regenerate: bun run tokens
  * ───────────────────────────────────────────────────── */
 
@@ -59,7 +61,7 @@
 
 /* System dark — only when no explicit [data-theme] override */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme="light"]):not([data-theme="spring"]) {
 
  	--color-bg: #000000;
  	--color-bg-secondary: #1c1c1e;
@@ -136,4 +138,20 @@
  	--font-weight-bold: 700;
  	--line-height-tight: 1.2;
  	--line-height-base: 1.6;
+}
+
+/* Spring & sunshine */
+:root[data-theme="spring"] {
+
+ 	--color-bg: #fffef5;
+ 	--color-bg-secondary: #f5f0db;
+ 	--color-text: #2a1f0a;
+ 	--color-text-secondary: #6b5332;
+ 	--color-accent: #c47d0e;
+ 	--color-accent-hover: #d48d1a;
+ 	--color-border: #ddd0a8;
+ 	--color-fill-red: #e05c3a;
+ 	--color-fill-green: #3d9e50;
+ 	--color-fill-blue: #0288d1;
+ 	--color-nav-bg: rgba(255, 254, 245, 0.82);
 }
