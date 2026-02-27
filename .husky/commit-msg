@@ -1,36 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-COMMIT_MSG_FILE=$1
-COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
-
-echo "📝 Commit message: $COMMIT_MSG"
-
-bun run -e "
-const msg = \`$COMMIT_MSG\`;
-const pattern = /^(feat|fix|docs|style|refactor|perf|test|chore|build|ci|revert)(\(.+\))?!?: .+\$/m;
-const allowedTypes = ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'chore', 'build', 'ci', 'revert'];
-
-if (!pattern.test(msg)) {
-  console.error('');
-  console.error('❌ Invalid commit message format.');
-  console.error('');
-  console.error('Commit messages must follow the conventional format:');
-  console.error('  <type>(<scope>): <description>');
-  console.error('');
-  console.error('Allowed types:', allowedTypes.join(', '));
-  console.error('');
-  console.error('Examples:');
-  console.error('  feat: add new component');
-  console.error('  fix: resolve layout issue on mobile');
-  console.error('  docs: update README');
-  console.log('  chore: update dependencies');
-  console.error('');
-  process.exit(1);
-}
-console.log('✅ Commit message follows conventional format!');
-"
-
-if [ $? -ne 0 ]; then
-  exit 1
-fi
+bun "$(dirname "$0")/scripts/validate-commit.js" "$1"
