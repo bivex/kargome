@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Webstack boilerplate built with Lit and Vite" />
-    <title>Webstack Boilerplate</title>
+    <meta name="description" content="Kargome — Lit + Vite + LightningCSS boilerplate" />
+    <title>Kargome</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script>
+      const t = localStorage.getItem('theme')
+      if (t) document.documentElement.setAttribute('data-theme', t)
+    </script>
   </head>
   <body>
     <app-shell></app-shell>
