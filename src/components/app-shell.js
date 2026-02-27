@@ -29,11 +29,23 @@ class AppShell extends LitElement {
       padding-inline: var(--space-6);
     }
 
+    @media (max-width: 480px) {
+      .container { padding-inline: var(--space-4); }
+    }
+
     /* ── hero ── */
     .hero {
       padding: var(--space-24) var(--space-6) var(--space-16);
       text-align: center;
       background: var(--color-bg);
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: var(--space-16) var(--space-6) var(--space-12); }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: var(--space-12) var(--space-4) var(--space-8); }
     }
 
     .hero__badge {
@@ -91,6 +103,15 @@ class AppShell extends LitElement {
       border-radius: var(--radius-lg);
     }
 
+    @media (max-width: 480px) {
+      .hero__stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-4) var(--space-6);
+        width: 100%;
+      }
+    }
+
     .stat {
       display: flex;
       flex-direction: column;
@@ -117,9 +138,21 @@ class AppShell extends LitElement {
       align-self: stretch;
     }
 
+    @media (max-width: 480px) {
+      .stat__sep { display: none; }
+    }
+
     /* ── stack ── */
     .section {
       padding: var(--space-16) var(--space-6);
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: var(--space-12) var(--space-6); }
+    }
+
+    @media (max-width: 480px) {
+      .section { padding: var(--space-8) var(--space-4); }
     }
 
     .section--alt {
@@ -137,7 +170,7 @@ class AppShell extends LitElement {
     }
 
     .section__title {
-      font-size: var(--font-size-2xl);
+      font-size: clamp(var(--font-size-xl), 4vw, var(--font-size-2xl));
       font-weight: var(--font-weight-bold);
       text-align: center;
       margin-bottom: var(--space-2);
@@ -149,6 +182,10 @@ class AppShell extends LitElement {
       color: var(--color-text-secondary);
       font-size: var(--font-size-base);
       margin-bottom: var(--space-12);
+    }
+
+    @media (max-width: 480px) {
+      .section__sub { margin-bottom: var(--space-8); }
     }
 
     .grid-4 {
@@ -237,6 +274,11 @@ class AppShell extends LitElement {
       min-width: 80px;
     }
 
+    @media (max-width: 480px) {
+      .demo-row { padding: var(--space-4); gap: var(--space-3); }
+      .demo-row__label { min-width: unset; width: 100%; }
+    }
+
     .demo-row__items {
       display: flex;
       flex-wrap: wrap;
@@ -247,8 +289,12 @@ class AppShell extends LitElement {
     /* ── tokens ── */
     .tokens-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
       gap: var(--space-3);
+    }
+
+    @media (max-width: 480px) {
+      .tokens-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     .token {
