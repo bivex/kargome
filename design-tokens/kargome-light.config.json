@@ -1,0 +1,14 @@
+{
+  "globalPrefix": "",
+  "keepReferences": false,
+  "preserveOrder": true,
+  "transforms": [
+    {
+      "name": "kargome-light",
+      "from": "design-tokens/kargome-light",
+      "to": [
+        { "as": "css", "to": "design-tokens/generated" }
+      ]
+    }
+  ]
+}

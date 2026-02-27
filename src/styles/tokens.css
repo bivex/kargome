@@ -1,102 +1,157 @@
+/* ─────────────────────────────────────────────────────
+ * Auto-generated — do not edit directly.
+ * Sources: design-tokens/kargome-light/
+ *          design-tokens/kargome-dark/
+ *          design-tokens/kargome-spring/
+ * Regenerate: bun run tokens
+ * ───────────────────────────────────────────────────── */
+
+/* Light (default) */
 :root {
-  /* Colors */
-  --color-bg: #ffffff;
-  --color-bg-secondary: #f5f5f7;
-  --color-text: #1d1d1f;
-  --color-text-secondary: #515154;
-  --color-accent: #0071e3;
-  --color-accent-hover: #0077ed;
-  --color-border: #d2d2d7;
-  --color-fill-red: #ff3b30;
-  --color-fill-green: #34c759;
-  --color-fill-blue: #007aff;
 
-  /* Typography */
-  --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.5rem;
-  --font-size-2xl: 2rem;
-  --font-size-3xl: 3rem;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --line-height-tight: 1.2;
-  --line-height-base: 1.6;
-
-  /* Spacing */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-6: 1.5rem;
-  --space-8: 2rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-24: 6rem;
-
-  /* Layout */
-  --container-max: 980px;
-  --container-wide: 1200px;
-
-  /* Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 18px;
-  --radius-full: 9999px;
-
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
-  --shadow-lg: 0 12px 40px rgba(0,0,0,0.15);
-
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 300ms ease;
-  --transition-slow: 500ms ease;
-
-  /* Nav */
-  --color-nav-bg: rgba(255, 255, 255, 0.72);
-  --nav-height: 48px;
+ 	--color-bg: #ffffff;
+ 	--color-bg-secondary: #f5f5f7;
+ 	--color-text: #1d1d1f;
+ 	--color-text-secondary: #515154;
+ 	--color-accent: #0071e3;
+ 	--color-accent-hover: #0077ed;
+ 	--color-border: #d2d2d7;
+ 	--color-fill-red: #ff3b30;
+ 	--color-fill-green: #34c759;
+ 	--color-fill-blue: #007aff;
+ 	--color-nav-bg: rgba(255, 255, 255, 0.72);
+ 	--container-max: 980px;
+ 	--container-wide: 1200px;
+ 	--nav-height: 48px;
+ 	--radius-sm: 4px;
+ 	--radius-md: 8px;
+ 	--radius-lg: 12px;
+ 	--radius-xl: 18px;
+ 	--radius-full: 9999px;
+ 	--shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+ 	--shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+ 	--shadow-lg: 0 12px 40px rgba(0,0,0,0.15);
+ 	--space-1: 0.25rem;
+ 	--space-2: 0.5rem;
+ 	--space-3: 0.75rem;
+ 	--space-4: 1rem;
+ 	--space-6: 1.5rem;
+ 	--space-8: 2rem;
+ 	--space-12: 3rem;
+ 	--space-16: 4rem;
+ 	--space-24: 6rem;
+ 	--transition-fast: 150ms ease;
+ 	--transition-base: 300ms ease;
+ 	--transition-slow: 500ms ease;
+ 	--font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+ 	--font-size-xs: 0.75rem;
+ 	--font-size-sm: 0.875rem;
+ 	--font-size-base: 1rem;
+ 	--font-size-lg: 1.125rem;
+ 	--font-size-xl: 1.5rem;
+ 	--font-size-2xl: 2rem;
+ 	--font-size-3xl: 3rem;
+ 	--font-weight-regular: 400;
+ 	--font-weight-medium: 500;
+ 	--font-weight-semibold: 600;
+ 	--font-weight-bold: 700;
+ 	--line-height-tight: 1.2;
+ 	--line-height-base: 1.6;
 }
 
-/* system preference — only when no explicit override */
+/* System dark — only when no explicit [data-theme] override */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --color-bg: #000000;
-    --color-bg-secondary: #1c1c1e;
-    --color-text: #f5f5f7;
-    --color-text-secondary: #98989d;
-    --color-accent: #2997ff;
-    --color-accent-hover: #429cff;
-    --color-border: #3a3a3c;
-    --color-nav-bg: rgba(0, 0, 0, 0.72);
+  :root:not([data-theme="light"]):not([data-theme="spring"]) {
+
+ 	--color-bg: #000000;
+ 	--color-bg-secondary: #1c1c1e;
+ 	--color-text: #f5f5f7;
+ 	--color-text-secondary: #98989d;
+ 	--color-accent: #2997ff;
+ 	--color-accent-hover: #429cff;
+ 	--color-border: #3a3a3c;
+ 	--color-nav-bg: rgba(0, 0, 0, 0.72);
   }
 }
 
-/* explicit dark — overrides system */
+/* Explicit dark */
 :root[data-theme="dark"] {
-  --color-bg: #000000;
-  --color-bg-secondary: #1c1c1e;
-  --color-text: #f5f5f7;
-  --color-text-secondary: #98989d;
-  --color-accent: #2997ff;
-  --color-accent-hover: #429cff;
-  --color-border: #3a3a3c;
-  --color-nav-bg: rgba(0, 0, 0, 0.72);
+
+ 	--color-bg: #000000;
+ 	--color-bg-secondary: #1c1c1e;
+ 	--color-text: #f5f5f7;
+ 	--color-text-secondary: #98989d;
+ 	--color-accent: #2997ff;
+ 	--color-accent-hover: #429cff;
+ 	--color-border: #3a3a3c;
+ 	--color-nav-bg: rgba(0, 0, 0, 0.72);
 }
 
-/* explicit light — overrides system */
+/* Explicit light — forces light even if system is dark */
 :root[data-theme="light"] {
-  --color-bg: #ffffff;
-  --color-bg-secondary: #f5f5f7;
-  --color-text: #1d1d1f;
-  --color-text-secondary: #515154;
-  --color-accent: #0071e3;
-  --color-accent-hover: #0077ed;
-  --color-border: #d2d2d7;
+
+ 	--color-bg: #ffffff;
+ 	--color-bg-secondary: #f5f5f7;
+ 	--color-text: #1d1d1f;
+ 	--color-text-secondary: #515154;
+ 	--color-accent: #0071e3;
+ 	--color-accent-hover: #0077ed;
+ 	--color-border: #d2d2d7;
+ 	--color-fill-red: #ff3b30;
+ 	--color-fill-green: #34c759;
+ 	--color-fill-blue: #007aff;
+ 	--color-nav-bg: rgba(255, 255, 255, 0.72);
+ 	--container-max: 980px;
+ 	--container-wide: 1200px;
+ 	--nav-height: 48px;
+ 	--radius-sm: 4px;
+ 	--radius-md: 8px;
+ 	--radius-lg: 12px;
+ 	--radius-xl: 18px;
+ 	--radius-full: 9999px;
+ 	--shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+ 	--shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+ 	--shadow-lg: 0 12px 40px rgba(0,0,0,0.15);
+ 	--space-1: 0.25rem;
+ 	--space-2: 0.5rem;
+ 	--space-3: 0.75rem;
+ 	--space-4: 1rem;
+ 	--space-6: 1.5rem;
+ 	--space-8: 2rem;
+ 	--space-12: 3rem;
+ 	--space-16: 4rem;
+ 	--space-24: 6rem;
+ 	--transition-fast: 150ms ease;
+ 	--transition-base: 300ms ease;
+ 	--transition-slow: 500ms ease;
+ 	--font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+ 	--font-size-xs: 0.75rem;
+ 	--font-size-sm: 0.875rem;
+ 	--font-size-base: 1rem;
+ 	--font-size-lg: 1.125rem;
+ 	--font-size-xl: 1.5rem;
+ 	--font-size-2xl: 2rem;
+ 	--font-size-3xl: 3rem;
+ 	--font-weight-regular: 400;
+ 	--font-weight-medium: 500;
+ 	--font-weight-semibold: 600;
+ 	--font-weight-bold: 700;
+ 	--line-height-tight: 1.2;
+ 	--line-height-base: 1.6;
+}
+
+/* Spring & sunshine */
+:root[data-theme="spring"] {
+
+ 	--color-bg: #fffef5;
+ 	--color-bg-secondary: #f5f0db;
+ 	--color-text: #2a1f0a;
+ 	--color-text-secondary: #6b5332;
+ 	--color-accent: #c47d0e;
+ 	--color-accent-hover: #d48d1a;
+ 	--color-border: #ddd0a8;
+ 	--color-fill-red: #e05c3a;
+ 	--color-fill-green: #3d9e50;
+ 	--color-fill-blue: #0288d1;
+ 	--color-nav-bg: rgba(255, 254, 245, 0.82);
 }

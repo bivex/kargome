@@ -1,0 +1,17 @@
+{
+  "color": {
+    "$type": "color",
+    "$description": "Kargome light mode color palette",
+    "bg": { "$value": "#ffffff", "$description": "Page background" },
+    "bg-secondary": { "$value": "#f5f5f7", "$description": "Secondary surface" },
+    "text": { "$value": "#1d1d1f", "$description": "Primary text" },
+    "text-secondary": { "$value": "#515154", "$description": "Secondary text — WCAG AA 6.5:1 on bg-secondary" },
+    "accent": { "$value": "#0071e3", "$description": "Interactive accent" },
+    "accent-hover": { "$value": "#0077ed", "$description": "Accent hover state" },
+    "border": { "$value": "#d2d2d7", "$description": "Subtle border" },
+    "fill-red": { "$value": "#ff3b30", "$description": "Destructive / error" },
+    "fill-green": { "$value": "#34c759", "$description": "Success" },
+    "fill-blue": { "$value": "#007aff", "$description": "Info" },
+    "nav-bg": { "$value": "rgba(255, 255, 255, 0.72)", "$description": "Frosted-glass nav background" }
+  }
+}

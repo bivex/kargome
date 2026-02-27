@@ -1,0 +1,8 @@
+{
+  "transition": {
+    "$description": "Motion duration + easing presets",
+    "fast":  { "$value": "150ms ease" },
+    "base":  { "$value": "300ms ease" },
+    "slow":  { "$value": "500ms ease" }
+  }
+}
